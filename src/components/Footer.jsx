@@ -1,87 +1,77 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
+const socials = [
+  {
+    icon: <FaGithub />,
+    link: "https://github.com/shivamcp345",
+  },
+  {
+    icon: <FaLinkedin />,
+    link: "https://linkedin.com/in/shivam-jeet",
+  },
+  {
+    icon: <SiLeetcode />,
+    link: "https://leetcode.com/u/shivamcp345",
+  },
+  {
+    icon: <FaEnvelope />,
+    link: "mailto:chandrap738@gmail.com",
+  },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f172a] border-t border-green-500/20 px-24 py-10">
+    <footer className="bg-[#08120d] border-t border-green-500/20 px-6 sm:px-10 md:px-16 lg:px-24 py-8">
 
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-
-        {/* Left */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
 
         <div>
 
-          <h2 className="text-3xl font-bold text-green-400">
+          <h2 className="text-2xl font-bold text-green-400">
             Shivam.
           </h2>
 
-          <p className="text-gray-400 mt-3 max-w-sm">
-            Frontend Developer passionate about building
-            modern, responsive and user-friendly web applications.
+          <p className="text-gray-400 mt-2 text-sm">
+            Frontend Developer | React Developer
           </p>
 
         </div>
 
-        {/* Center */}
-
-        <div className="flex gap-8 text-gray-300">
-
-          <a href="#home" className="hover:text-green-400 transition">
-            Home
-          </a>
-
-          <a href="#about" className="hover:text-green-400 transition">
-            About
-          </a>
-
-          <a href="#projects" className="hover:text-green-400 transition">
-            Projects
-          </a>
-
-          <a href="#contact" className="hover:text-green-400 transition">
-            Contact
-          </a>
-
-        </div>
-
-        {/* Right */}
-
         <div className="flex gap-5 text-2xl">
 
-          <a
-            href="https://github.com/yourusername"
-            target="_blank"
-            rel="noreferrer"
-            className="text-gray-300 hover:text-green-400 hover:scale-110 transition-all"
-          >
-            <FaGithub />
-          </a>
+          {socials.map((item, index) => (
 
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noreferrer"
-            className="text-gray-300 hover:text-green-400 hover:scale-110 transition-all"
-          >
-            <FaLinkedin />
-          </a>
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full border border-green-500/30 flex items-center justify-center text-green-400 hover:bg-green-500 hover:text-black hover:scale-110 transition-all duration-300"
+            >
 
-          <a
-            href="mailto:youremail@gmail.com"
-            className="text-gray-300 hover:text-green-400 hover:scale-110 transition-all"
-          >
-            <FaEnvelope />
-          </a>
+              {item.icon}
+
+            </a>
+
+          ))}
 
         </div>
 
       </div>
 
-      {/* Bottom */}
+      <div className="border-t border-green-500/10 mt-8 pt-6 text-center">
 
-      <div className="border-t border-green-500/20 mt-10 pt-6 text-center text-gray-500">
+        <p className="text-gray-500 text-sm">
 
-        © 2026 Shivam. All Rights Reserved.
+          © {new Date().getFullYear()} Shivam. Built with React & Tailwind CSS 💚
+
+        </p>
 
       </div>
 
@@ -90,3 +80,11 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+

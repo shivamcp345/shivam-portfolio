@@ -10,7 +10,7 @@ import Experience from './components/Experience'
 
 const App = () => {
   return (
-     <div className='bg-[#08120d]'>
+     <div className="bg-[#08120d] overflow-x-hidden">
         <Navbar/>
         <Hero/>
         <About/>

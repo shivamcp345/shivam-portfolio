@@ -21,3 +21,31 @@
 html {
   scroll-behavior: smooth;
 }
+.hero {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 80px;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 20px;
+  }
+}
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
